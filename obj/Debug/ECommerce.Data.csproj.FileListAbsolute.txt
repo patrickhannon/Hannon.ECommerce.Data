@@ -1,0 +1,9 @@
+C:\SourceControl\ECommerce.Data\bin\Debug\ECommerce.Data.dll
+C:\SourceControl\ECommerce.Data\bin\Debug\ECommerce.Data.pdb
+C:\SourceControl\ECommerce.Data\bin\Debug\Dapper.dll
+C:\SourceControl\ECommerce.Data\bin\Debug\Dapper.xml
+C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.csproj.CoreCompileInputs.cache
+C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.csproj.CopyComplete
+C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.dll
+C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.pdb
+C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.csprojAssemblyReference.cache
