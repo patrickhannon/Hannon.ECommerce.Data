@@ -1,0 +1,9 @@
+C:\SourceControl\Hannon.ECommerce.Data\bin\Release\ECommerce.Data.dll
+C:\SourceControl\Hannon.ECommerce.Data\bin\Release\ECommerce.Data.pdb
+C:\SourceControl\Hannon.ECommerce.Data\bin\Release\Dapper.dll
+C:\SourceControl\Hannon.ECommerce.Data\bin\Release\Dapper.xml
+C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.csprojAssemblyReference.cache
+C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.csproj.CoreCompileInputs.cache
+C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.csproj.CopyComplete
+C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.dll
+C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.pdb
