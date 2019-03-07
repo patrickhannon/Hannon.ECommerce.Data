@@ -1,18 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.props" Condition="Exists('..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DF351610-4897-4DF0-8BCF-D926F2A4F2EB}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ECommerce.Data</RootNamespace>
     <AssemblyName>ECommerce.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,12 +34,194 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Autofac.4.9.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\Hannon.ECommerce\packages\Dapper.1.50.7\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.Hosting.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.Http.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.Http.Extensions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.StaticFiles, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.StaticFiles.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.StaticFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Caching.Memory.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Configuration.EnvironmentVariables.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Configuration.FileExtensions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Embedded, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Physical.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.FileSystemGlobbing.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.ObjectPool.2.2.0\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.WebEncoders, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Extensions.WebEncoders.2.2.0\lib\netstandard2.0\Microsoft.Extensions.WebEncoders.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pipelines.Sockets.Unofficial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=42ea0a778e13fbe2, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Pipelines.Sockets.Unofficial.1.0.7\lib\net461\Pipelines.Sockets.Unofficial.dll</HintPath>
+    </Reference>
+    <Reference Include="RedLockNet.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=1dffde0a6c007f07, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\RedLock.net.2.2.0\lib\net461\RedLockNet.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="RedLockNet.SERedis, Version=2.2.0.0, Culture=neutral, PublicKeyToken=1dffde0a6c007f07, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\RedLock.net.2.2.0\lib\net461\RedLockNet.SERedis.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\StackExchange.Redis.2.0.513\lib\net461\StackExchange.Redis.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Diagnostics.PerformanceCounter.4.5.0\lib\net461\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.IO.Pipelines.4.5.1\lib\netstandard2.0\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Reflection.Metadata.1.6.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Threading.Channels.4.5.0\lib\netstandard2.0\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Hannon.ECommerce\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,15 +230,392 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Core\BaseEntity.cs" />
+    <Compile Include="Core\CommonHelper.cs" />
+    <Compile Include="Core\Data\DataProviderType.cs" />
+    <Compile Include="Core\Data\DataSettings.cs" />
+    <Compile Include="Core\Data\DataSettingsManager.cs" />
+    <Compile Include="Core\Data\IDataProvider.cs" />
+    <Compile Include="Core\Data\IDataProviderManager.cs" />
+    <Compile Include="Core\Data\IRepository.cs" />
+    <Compile Include="Core\Data\NopDataSettingsDefaults.cs" />
+    <Compile Include="Core\Html\BBCodeHelper.cs" />
+    <Compile Include="Core\Html\CodeFormatter\CLikeFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\CodeFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\CodeFormatHelper.cs" />
+    <Compile Include="Core\Html\CodeFormatter\CSharpFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\HighlightOptions.cs" />
+    <Compile Include="Core\Html\CodeFormatter\HtmlFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\JavaScriptFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\MshFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\SourceFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\TsqlFormat.cs" />
+    <Compile Include="Core\Html\CodeFormatter\VisualBasicFormat.cs" />
+    <Compile Include="Core\Html\HtmlHelper.cs" />
+    <Compile Include="Core\Html\ResolveLinksHelper.cs" />
+    <Compile Include="Core\IPagedList.cs" />
+    <Compile Include="Core\IStoreContext.cs" />
+    <Compile Include="Core\IWebHelper.cs" />
+    <Compile Include="Core\IWorkContext.cs" />
+    <Compile Include="Core\MimeTypes.cs" />
+    <Compile Include="Core\NopException.cs" />
+    <Compile Include="Core\NopVersion.cs" />
+    <Compile Include="Core\PagedList.cs" />
+    <Compile Include="Core\TypeConverterRegistrationStartUpTask.cs" />
+    <Compile Include="Core\XmlHelper.cs" />
+    <Compile Include="Entities\Affiliates\Affiliate.cs" />
+    <Compile Include="Entities\Blogs\BlogComment.cs" />
+    <Compile Include="Entities\Blogs\BlogPost.cs" />
+    <Compile Include="Entities\Blogs\BlogPostTag.cs" />
+    <Compile Include="Entities\Blogs\BlogSettings.cs" />
+    <Compile Include="Entities\Blogs\Events.cs" />
+    <Compile Include="Entities\Caching\ICacheManager.cs" />
+    <Compile Include="Entities\Caching\IEntityForCaching.cs" />
+    <Compile Include="Entities\Caching\ILocker.cs" />
+    <Compile Include="Entities\Caching\IRedisConnectionWrapper.cs" />
+    <Compile Include="Entities\Caching\IStaticCacheManager.cs" />
+    <Compile Include="Entities\Caching\MemoryCacheManager.cs" />
+    <Compile Include="Entities\Caching\NopCachingDefaults.cs" />
+    <Compile Include="Entities\Caching\NopNullCache.cs" />
+    <Compile Include="Entities\Caching\PerRequestCacheManager.cs" />
+    <Compile Include="Entities\Caching\RedisCacheManager.cs" />
+    <Compile Include="Entities\Caching\RedisConnectionWrapper.cs" />
+    <Compile Include="Entities\Catalog\AttributeControlType.cs" />
+    <Compile Include="Entities\Catalog\AttributeValueType.cs" />
+    <Compile Include="Entities\Catalog\BackInStockSubscription.cs" />
+    <Compile Include="Entities\Catalog\BackorderMode.cs" />
+    <Compile Include="Entities\Catalog\CatalogSettings.cs" />
+    <Compile Include="Entities\Catalog\Category.cs" />
+    <Compile Include="Entities\Catalog\CategoryTemplate.cs" />
+    <Compile Include="Entities\Catalog\CrossSellProduct.cs" />
+    <Compile Include="Entities\Catalog\DownloadActivationType.cs" />
+    <Compile Include="Entities\Catalog\Events.cs" />
+    <Compile Include="Entities\Catalog\GiftCardType.cs" />
+    <Compile Include="Entities\Catalog\HanCatalogDefaults.cs" />
+    <Compile Include="Entities\Catalog\LowStockActivity.cs" />
+    <Compile Include="Entities\Catalog\ManageInventoryMethod.cs" />
+    <Compile Include="Entities\Catalog\Manufacturer.cs" />
+    <Compile Include="Entities\Catalog\ManufacturerTemplate.cs" />
+    <Compile Include="Entities\Catalog\PredefinedProductAttributeValue.cs" />
+    <Compile Include="Entities\Catalog\PriceRange.cs" />
+    <Compile Include="Entities\Catalog\Product.cs" />
+    <Compile Include="Entities\Catalog\ProductAttribute.cs" />
+    <Compile Include="Entities\Catalog\ProductAttributeCombination.cs" />
+    <Compile Include="Entities\Catalog\ProductAttributeMapping.cs" />
+    <Compile Include="Entities\Catalog\ProductAttributeValue.cs" />
+    <Compile Include="Entities\Catalog\ProductCategory.cs" />
+    <Compile Include="Entities\Catalog\ProductEditorSettings.cs" />
+    <Compile Include="Entities\Catalog\ProductManufacturer.cs" />
+    <Compile Include="Entities\Catalog\ProductPicture.cs" />
+    <Compile Include="Entities\Catalog\ProductReview.cs" />
+    <Compile Include="Entities\Catalog\ProductReviewHelpfulness.cs" />
+    <Compile Include="Entities\Catalog\ProductReviewReviewTypeMapping.cs" />
+    <Compile Include="Entities\Catalog\ProductSortingEnum.cs" />
+    <Compile Include="Entities\Catalog\ProductSpecificationAttribute.cs" />
+    <Compile Include="Entities\Catalog\ProductTag.cs" />
+    <Compile Include="Entities\Catalog\ProductTagWithCount.cs" />
+    <Compile Include="Entities\Catalog\ProductTemplate.cs" />
+    <Compile Include="Entities\Catalog\ProductType.cs" />
+    <Compile Include="Entities\Catalog\ProductWarehouseInventory.cs" />
+    <Compile Include="Entities\Catalog\RecurringProductCyclePeriod.cs" />
+    <Compile Include="Entities\Catalog\RelatedProduct.cs" />
+    <Compile Include="Entities\Catalog\RentalPricePeriod.cs" />
+    <Compile Include="Entities\Catalog\ReviewType.cs" />
+    <Compile Include="Entities\Catalog\SpecificationAttribute.cs" />
+    <Compile Include="Entities\Catalog\SpecificationAttributeOption.cs" />
+    <Compile Include="Entities\Catalog\SpecificationAttributeOptionFilter.cs" />
+    <Compile Include="Entities\Catalog\SpecificationAttributeType.cs" />
+    <Compile Include="Entities\Catalog\StockQuantityHistory.cs" />
+    <Compile Include="Entities\Catalog\TierPrice.cs" />
+    <Compile Include="Entities\Cms\WidgetSettings.cs" />
+    <Compile Include="Entities\Common\Address.cs" />
+    <Compile Include="Entities\Common\AddressAttribute.cs" />
+    <Compile Include="Entities\Common\AddressAttributeValue.cs" />
+    <Compile Include="Entities\Common\AddressSettings.cs" />
+    <Compile Include="Entities\Common\AdminAreaSettings.cs" />
+    <Compile Include="Entities\Common\CommonSettings.cs" />
+    <Compile Include="Entities\Common\DecimalQueryType.cs" />
+    <Compile Include="Entities\Common\DisplayDefaultFooterItemSettings.cs" />
+    <Compile Include="Entities\Common\DisplayDefaultMenuItemSettings.cs" />
+    <Compile Include="Entities\Common\FulltextSearchMode.cs" />
+    <Compile Include="Entities\Common\GenericAttribute.cs" />
+    <Compile Include="Entities\Common\IntQueryType.cs" />
+    <Compile Include="Entities\Common\PdfSettings.cs" />
+    <Compile Include="Entities\Common\SearchTerm.cs" />
+    <Compile Include="Entities\Common\SearchTermReportLine.cs" />
+    <Compile Include="Entities\Common\StringQueryType.cs" />
+    <Compile Include="Entities\ComponentModel\GenericDictionaryTypeConverter.cs" />
+    <Compile Include="Entities\ComponentModel\GenericListTypeConverter.cs" />
+    <Compile Include="Entities\ComponentModel\WriteLockDisposable.cs" />
+    <Compile Include="Entities\Configuration\HostingConfig.cs" />
+    <Compile Include="Entities\Configuration\ISettings.cs" />
+    <Compile Include="Entities\Configuration\NopConfig.cs" />
+    <Compile Include="Entities\Configuration\Setting.cs" />
+    <Compile Include="Entities\Customers\BestCustomerReportLine.cs" />
+    <Compile Include="Entities\Customers\Customer.cs" />
+    <Compile Include="Entities\Customers\CustomerAddressMapping.cs" />
+    <Compile Include="Entities\Customers\CustomerAttribute.cs" />
+    <Compile Include="Entities\Customers\CustomerAttributeValue.cs" />
+    <Compile Include="Entities\Customers\CustomerCustomerRoleMapping.cs" />
+    <Compile Include="Entities\Customers\CustomerExtensions.cs" />
+    <Compile Include="Entities\Customers\CustomerLoggedinEvent.cs" />
+    <Compile Include="Entities\Customers\CustomerLoggedOutEvent.cs" />
+    <Compile Include="Entities\Customers\CustomerLoginResults.cs" />
+    <Compile Include="Entities\Customers\CustomerNameFormat.cs" />
+    <Compile Include="Entities\Customers\CustomerPassword.cs" />
+    <Compile Include="Entities\Customers\CustomerPasswordChangedEvent.cs" />
+    <Compile Include="Entities\Customers\CustomerRegisteredEvent.cs" />
+    <Compile Include="Entities\Customers\CustomerRole.cs" />
+    <Compile Include="Entities\Customers\CustomerSettings.cs" />
+    <Compile Include="Entities\Customers\ExternalAuthenticationRecord.cs" />
+    <Compile Include="Entities\Customers\ExternalAuthenticationSettings.cs" />
+    <Compile Include="Entities\Customers\HanCustomerDefaults.cs" />
+    <Compile Include="Entities\Customers\PasswordFormat.cs" />
+    <Compile Include="Entities\Customers\RewardPointsActivatingDelayPeriod.cs" />
+    <Compile Include="Entities\Customers\RewardPointsActivatingDelayPeriodExtensions.cs" />
+    <Compile Include="Entities\Customers\RewardPointsHistory.cs" />
+    <Compile Include="Entities\Customers\RewardPointsSettings.cs" />
+    <Compile Include="Entities\Customers\UserRegistrationType.cs" />
+    <Compile Include="Entities\Directory\Country.cs" />
+    <Compile Include="Entities\Directory\Currency.cs" />
+    <Compile Include="Entities\Directory\CurrencySettings.cs" />
+    <Compile Include="Entities\Directory\ExchangeRate.cs" />
+    <Compile Include="Entities\Directory\MeasureDimension.cs" />
+    <Compile Include="Entities\Directory\MeasureSettings.cs" />
+    <Compile Include="Entities\Directory\MeasureWeight.cs" />
+    <Compile Include="Entities\Directory\RoundingType.cs" />
+    <Compile Include="Entities\Directory\StateProvince.cs" />
+    <Compile Include="Entities\Discounts\Discount.cs" />
+    <Compile Include="Entities\Discounts\DiscountCategoryMapping.cs" />
+    <Compile Include="Entities\Discounts\DiscountLimitationType.cs" />
+    <Compile Include="Entities\Discounts\DiscountManufacturerMapping.cs" />
+    <Compile Include="Entities\Discounts\DiscountProductMapping.cs" />
+    <Compile Include="Entities\Discounts\DiscountRequirement.cs" />
+    <Compile Include="Entities\Discounts\DiscountType.cs" />
+    <Compile Include="Entities\Discounts\DiscountUsageHistory.cs" />
+    <Compile Include="Entities\Discounts\IDiscountSupported.cs" />
+    <Compile Include="Entities\Discounts\RequirementGroupInteractionType.cs" />
+    <Compile Include="Entities\Forums\EditorType.cs" />
+    <Compile Include="Entities\Forums\Forum.cs" />
+    <Compile Include="Entities\Forums\ForumGroup.cs" />
+    <Compile Include="Entities\Forums\ForumPost.cs" />
+    <Compile Include="Entities\Forums\ForumPostVote.cs" />
+    <Compile Include="Entities\Forums\ForumSearchType.cs" />
+    <Compile Include="Entities\Forums\ForumSettings.cs" />
+    <Compile Include="Entities\Forums\ForumSubscription.cs" />
+    <Compile Include="Entities\Forums\ForumTopic.cs" />
+    <Compile Include="Entities\Forums\ForumTopicType.cs" />
+    <Compile Include="Entities\Forums\PrivateMessage.cs" />
+    <Compile Include="Entities\Gdpr\Events.cs" />
+    <Compile Include="Entities\Gdpr\GdprConsent.cs" />
+    <Compile Include="Entities\Gdpr\GdprLog.cs" />
+    <Compile Include="Entities\Gdpr\GdprRequestType.cs" />
+    <Compile Include="Entities\Gdpr\GdprSettings.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\CLikeFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\CodeFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\CodeFormatHelper.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\CSharpFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\HighlightOptions.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\HtmlFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\JavaScriptFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\MshFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\SourceFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\TsqlFormat.cs" />
+    <Compile Include="Entities\Html\CodeFormatter\VisualBasicFormat.cs" />
+    <Compile Include="Entities\Html\HtmlHelper.cs" />
+    <Compile Include="Entities\Html\ResolveLinksHelper.cs" />
+    <Compile Include="Entities\Http\Extensions\SessionExtensions.cs" />
+    <Compile Include="Entities\Http\KeepAliveMiddleware.cs" />
+    <Compile Include="Entities\Http\NopCookieDefaults.cs" />
+    <Compile Include="Entities\Http\NopHttpDefaults.cs" />
+    <Compile Include="Entities\Infrastructure\AppDomainTypeFinder.cs" />
+    <Compile Include="Entities\Infrastructure\BaseSingleton.cs" />
+    <Compile Include="Entities\Infrastructure\DependencyManagement\IDependencyRegistrar.cs" />
+    <Compile Include="Entities\Infrastructure\IEngine.cs" />
+    <Compile Include="Entities\Infrastructure\INopFileProvider.cs" />
+    <Compile Include="Entities\Infrastructure\INopStartup.cs" />
+    <Compile Include="Entities\Infrastructure\IStartupTask.cs" />
+    <Compile Include="Entities\Infrastructure\ITypeFinder.cs" />
+    <Compile Include="Entities\Infrastructure\Mapper\AutoMapperConfiguration.cs" />
+    <Compile Include="Entities\Infrastructure\Mapper\IOrderedMapperProfile.cs" />
+    <Compile Include="Entities\Infrastructure\NopFileProvider.cs" />
+    <Compile Include="Entities\Infrastructure\NopInfrastructureDefaults.cs" />
+    <Compile Include="Entities\Infrastructure\Singleton.cs" />
+    <Compile Include="Entities\Infrastructure\SingletonDictionary.cs" />
+    <Compile Include="Entities\Infrastructure\SingletonList.cs" />
+    <Compile Include="Entities\Infrastructure\WebAppTypeFinder.cs" />
+    <Compile Include="Entities\Localization\ILocalizedEntity.cs" />
+    <Compile Include="Entities\Localization\ILocalizedEnum.cs" />
+    <Compile Include="Entities\Localization\Language.cs" />
+    <Compile Include="Entities\Localization\LocaleStringResource.cs" />
+    <Compile Include="Entities\Localization\LocalizationSettings.cs" />
+    <Compile Include="Entities\Localization\LocalizedProperty.cs" />
+    <Compile Include="Entities\Logging\ActivityLog.cs" />
+    <Compile Include="Entities\Logging\ActivityLogType.cs" />
+    <Compile Include="Entities\Logging\Log.cs" />
+    <Compile Include="Entities\Logging\LogLevel.cs" />
+    <Compile Include="Entities\Media\Picture.cs" />
+    <Compile Include="Entities\Media\PictureBinary.cs" />
+    <Compile Include="Entities\Messages\AdditionTokensAddedEvent.cs" />
+    <Compile Include="Entities\Messages\Campaign.cs" />
+    <Compile Include="Entities\Messages\CampaignAdditionTokensAddedEvent.cs" />
+    <Compile Include="Entities\Messages\EmailAccount.cs" />
+    <Compile Include="Entities\Messages\EmailAccountSettings.cs" />
+    <Compile Include="Entities\Messages\EmailSubscribedEvent.cs" />
+    <Compile Include="Entities\Messages\EmailUnsubscribedEvent.cs" />
+    <Compile Include="Entities\Messages\MessageDelayPeriod.cs" />
+    <Compile Include="Entities\Messages\MessageDelayPeriodExtensions.cs" />
+    <Compile Include="Entities\Messages\MessageTemplate.cs" />
+    <Compile Include="Entities\Messages\MessageTemplatesSettings.cs" />
+    <Compile Include="Entities\Messages\MessageTemplateSystemNames.cs" />
+    <Compile Include="Entities\Messages\MessageTokensAddedEvent.cs" />
+    <Compile Include="Entities\Messages\NewsLetterSubscription.cs" />
+    <Compile Include="Entities\Messages\QueuedEmail.cs" />
+    <Compile Include="Entities\Messages\QueuedEmailPriority.cs" />
+    <Compile Include="Entities\News\Events.cs" />
+    <Compile Include="Entities\News\NewsComment.cs" />
+    <Compile Include="Entities\News\NewsItem.cs" />
+    <Compile Include="Entities\News\NewsSettings.cs" />
+    <Compile Include="Entities\Orders\BestsellersReportLine.cs" />
+    <Compile Include="Entities\Orders\CheckoutAttribute.cs" />
+    <Compile Include="Entities\Orders\CheckoutAttributeValue.cs" />
+    <Compile Include="Entities\Orders\GiftCard.cs" />
+    <Compile Include="Entities\Orders\GiftCardUsageHistory.cs" />
+    <Compile Include="Entities\Orders\Order.cs" />
+    <Compile Include="Entities\Orders\OrderAverageReportLine.cs" />
+    <Compile Include="Entities\Orders\OrderAverageReportLineSummary.cs" />
+    <Compile Include="Entities\Orders\OrderByCountryReportLine.cs" />
+    <Compile Include="Entities\Orders\OrderCancelledEvent.cs" />
+    <Compile Include="Entities\Orders\OrderItem.cs" />
+    <Compile Include="Entities\Orders\OrderNote.cs" />
+    <Compile Include="Entities\Orders\OrderPaidEvent.cs" />
+    <Compile Include="Entities\Orders\OrderPlacedEvent.cs" />
+    <Compile Include="Entities\Orders\OrderRefundedEvent.cs" />
+    <Compile Include="Entities\Orders\OrderSettings.cs" />
+    <Compile Include="Entities\Orders\OrderStatus.cs" />
+    <Compile Include="Entities\Orders\OrderVoidedEvent.cs" />
+    <Compile Include="Entities\Orders\RecurringPayment.cs" />
+    <Compile Include="Entities\Orders\RecurringPaymentHistory.cs" />
+    <Compile Include="Entities\Orders\ReturnRequest.cs" />
+    <Compile Include="Entities\Orders\ReturnRequestAction.cs" />
+    <Compile Include="Entities\Orders\ReturnRequestReason.cs" />
+    <Compile Include="Entities\Orders\ReturnRequestStatus.cs" />
+    <Compile Include="Entities\Orders\ShoppingCartItem.cs" />
+    <Compile Include="Entities\Orders\ShoppingCartSettings.cs" />
+    <Compile Include="Entities\Orders\ShoppingCartType.cs" />
+    <Compile Include="Entities\Payments\PaymentSettings.cs" />
+    <Compile Include="Entities\Payments\PaymentStatus.cs" />
+    <Compile Include="Entities\Plugins\IDescriptor.cs" />
+    <Compile Include="Entities\Plugins\IOfficialFeedManager.cs" />
+    <Compile Include="Entities\Plugins\LoadPluginsMode.cs" />
+    <Compile Include="Entities\Plugins\NopPluginDefaults.cs" />
+    <Compile Include="Entities\Plugins\OfficialFeedCategory.cs" />
+    <Compile Include="Entities\Plugins\OfficialFeedManager.cs" />
+    <Compile Include="Entities\Plugins\OfficialFeedPlugin.cs" />
+    <Compile Include="Entities\Plugins\OfficialFeedVersion.cs" />
+    <Compile Include="Entities\Polls\Poll.cs" />
+    <Compile Include="Entities\Polls\PollAnswer.cs" />
+    <Compile Include="Entities\Polls\PollVotingRecord.cs" />
     <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\ProductProductTagMapping.cs" />
+    <Compile Include="Entities\ProductSpecificationAttribute.cs" />
     <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\Security\AclRecord.cs" />
+    <Compile Include="Entities\Security\CaptchaSettings.cs" />
+    <Compile Include="Entities\Security\DefaultPermissionRecord.cs" />
+    <Compile Include="Entities\Security\IAclSupported.cs" />
+    <Compile Include="Entities\Security\PermissionRecord.cs" />
+    <Compile Include="Entities\Security\PermissionRecordCustomerRoleMapping.cs" />
+    <Compile Include="Entities\Security\SecuritySettings.cs" />
+    <Compile Include="Entities\Seo\ISlugSupported.cs" />
+    <Compile Include="Entities\Seo\PageTitleSeoAdjustment.cs" />
+    <Compile Include="Entities\Seo\SeoSettings.cs" />
+    <Compile Include="Entities\Seo\UrlRecord.cs" />
+    <Compile Include="Entities\Seo\WwwRequirement.cs" />
+    <Compile Include="Entities\Shipping\DeliveryDate.cs" />
+    <Compile Include="Entities\Shipping\PickupPoint.cs" />
+    <Compile Include="Entities\Shipping\PickupPointTypeConverter.cs" />
+    <Compile Include="Entities\Shipping\ProductAvailabilityRange.cs" />
+    <Compile Include="Entities\Shipping\Shipment.cs" />
+    <Compile Include="Entities\Shipping\ShipmentDeliveredEvent.cs" />
+    <Compile Include="Entities\Shipping\ShipmentItem.cs" />
+    <Compile Include="Entities\Shipping\ShipmentSentEvent.cs" />
+    <Compile Include="Entities\Shipping\ShippingMethod.cs" />
+    <Compile Include="Entities\Shipping\ShippingMethodCountryMapping.cs" />
+    <Compile Include="Entities\Shipping\ShippingOption.cs" />
+    <Compile Include="Entities\Shipping\ShippingOptionListTypeConverter.cs" />
+    <Compile Include="Entities\Shipping\ShippingOptionTypeConverter.cs" />
+    <Compile Include="Entities\Shipping\ShippingSettings.cs" />
+    <Compile Include="Entities\Shipping\ShippingStatus.cs" />
+    <Compile Include="Entities\Shipping\Warehouse.cs" />
+    <Compile Include="Entities\SpecificationAttribute.cs" />
+    <Compile Include="Entities\SpecificationAttributeOption.cs" />
+    <Compile Include="Entities\StoreInformationSettings.cs" />
+    <Compile Include="Entities\Stores\IStoreMappingSupported.cs" />
+    <Compile Include="Entities\Stores\Store.cs" />
+    <Compile Include="Entities\Stores\StoreMapping.cs" />
+    <Compile Include="Entities\Store\Store.cs" />
+    <Compile Include="Entities\Store\StoreMapping.cs" />
+    <Compile Include="Entities\Tasks\ScheduleTask.cs" />
+    <Compile Include="Entities\Tax\TaxBasedOn.cs" />
+    <Compile Include="Entities\Tax\TaxCategory.cs" />
+    <Compile Include="Entities\Tax\TaxDisplayType.cs" />
+    <Compile Include="Entities\Tax\TaxSettings.cs" />
+    <Compile Include="Entities\Tax\VatNumberStatus.cs" />
+    <Compile Include="Entities\Topics\Topic.cs" />
+    <Compile Include="Entities\Topics\TopicTemplate.cs" />
     <Compile Include="Entities\UserRole.cs" />
+    <Compile Include="Entities\Vendors\NopVendorDefaults.cs" />
+    <Compile Include="Entities\Vendors\Vendor.cs" />
+    <Compile Include="Entities\Vendors\VendorAttribute.cs" />
+    <Compile Include="Entities\Vendors\VendorAttributeValue.cs" />
+    <Compile Include="Entities\Vendors\VendorNote.cs" />
+    <Compile Include="Entities\Vendors\VendorSettings.cs" />
+    <Compile Include="Plugins\IOfficialFeedManager.cs" />
+    <Compile Include="Plugins\LoadPluginsMode.cs" />
+    <Compile Include="Plugins\NopPluginDefaults.cs" />
+    <Compile Include="Plugins\OfficialFeedCategory.cs" />
+    <Compile Include="Plugins\OfficialFeedManager.cs" />
+    <Compile Include="Plugins\OfficialFeedPlugin.cs" />
+    <Compile Include="Plugins\OfficialFeedVersion.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\PictureBinaryRepository.cs" />
+    <Compile Include="Repository\PictureRepository.cs" />
+    <Compile Include="Repository\ProductAttributeCombinationRepository.cs" />
+    <Compile Include="Repository\ProductAttributeRepository.cs" />
+    <Compile Include="Repository\ProductAttributeValueRepository.cs" />
+    <Compile Include="Repository\ProductAvailabilityRangeRepository.cs" />
+    <Compile Include="Repository\ProductCategoryMappingRepository.cs" />
+    <Compile Include="Repository\ProductProductAttributeMappingRepository.cs" />
+    <Compile Include="Repository\ProductProductTagMappingRepository.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\ProductSpecificationAttributeMappingRepository.cs" />
     <Compile Include="Repository\RolesRepository.cs" />
+    <Compile Include="Repository\SpecificationAttributeOptionRepository.cs" />
+    <Compile Include="Repository\SpecificationAttributeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Core\Nop.Core.csproj" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.props')" Text="$([System.String]::Format('$(ErrorText)', '..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.props'))" />
+    <Error Condition="!Exists('..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.targets'))" />
+  </Target>
+  <Import Project="..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.targets" Condition="Exists('..\Hannon.ECommerce\packages\Microsoft.Extensions.FileProviders.Embedded.2.2.0\build\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.targets')" />
+  <Import Project="..\Hannon.ECommerce\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\Hannon.ECommerce\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\Hannon.ECommerce\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\Hannon.ECommerce\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
 </Project>
