@@ -5,9 +5,6 @@ C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.csprojAssembly
 C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.csproj.CoreCompileInputs.cache
 C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.csproj.CopyComplete
 C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.pdb
-C:\SourceControl\Hannon.ECommerce.Data\bin\Release\ECommerce.Data.exe
-C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.exe
-C:\SourceControl\Hannon.ECommerce.Data\bin\Release\ECommerce.Data.exe.config
 C:\SourceControl\Hannon.ECommerce.Data\bin\Release\Microsoft.Win32.Primitives.dll
 C:\SourceControl\Hannon.ECommerce.Data\bin\Release\netstandard.dll
 C:\SourceControl\Hannon.ECommerce.Data\bin\Release\System.AppContext.dll
@@ -209,4 +206,6 @@ C:\SourceControl\Hannon.ECommerce.Data\bin\Release\System.Threading.Channels.xml
 C:\SourceControl\Hannon.ECommerce.Data\bin\Release\System.Threading.Tasks.Extensions.xml
 C:\SourceControl\Hannon.ECommerce.Data\bin\Release\System.ValueTuple.xml
 C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.csproj.App.config
-C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.exe.config
+C:\SourceControl\Hannon.ECommerce.Data\bin\Release\ECommerce.Data.dll.config
+C:\SourceControl\Hannon.ECommerce.Data\bin\Release\ECommerce.Data.dll
+C:\SourceControl\Hannon.ECommerce.Data\obj\Release\ECommerce.Data.dll

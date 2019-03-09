@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using ECommerce.Data.Core;
 
 namespace ECommerce.Data.Entities
 {
     /// <summary>
     /// Represents a specification attribute
     /// </summary>
-    public partial class SpecificationAttribute 
+    public partial class SpecificationAttribute : BaseEntity
     {
         private ICollection<SpecificationAttributeOption> _specificationAttributeOptions;
 

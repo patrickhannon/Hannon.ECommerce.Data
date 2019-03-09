@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DF351610-4897-4DF0-8BCF-D926F2A4F2EB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ECommerce.Data</RootNamespace>
     <AssemblyName>ECommerce.Data</AssemblyName>
@@ -589,7 +589,7 @@
     <Compile Include="Repository\ProductAvailabilityRangeRepository.cs" />
     <Compile Include="Repository\ProductCategoryMappingRepository.cs" />
     <Compile Include="Repository\ProductProductAttributeMappingRepository.cs" />
-    <Compile Include="Repository\ProductProductTagMappingRepository.cs" />
+    <Compile Include="Repository\ProductTagMappingRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\ProductSpecificationAttributeMappingRepository.cs" />
     <Compile Include="Repository\RolesRepository.cs" />

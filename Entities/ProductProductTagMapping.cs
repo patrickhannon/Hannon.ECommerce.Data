@@ -1,3 +1,4 @@
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities;
 using ECommerce.Data.Entities.Catalog;
 
@@ -6,7 +7,7 @@ namespace ECommerce.Data.Entities
     /// <summary>
     /// Represents a product-product tag mapping class
     /// </summary>
-    public class ProductProductTagMapping
+    public class ProductProductTagMapping : BaseEntity
     {
         /// <summary>
         /// Gets or sets the product identifier

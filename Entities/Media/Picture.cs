@@ -1,9 +1,11 @@
+using ECommerce.Data.Core;
+
 namespace ECommerce.Data.Entities.Media
 {
     /// <summary>
     /// Represents a picture
     /// </summary>
-    public partial class Picture
+    public partial class Picture : BaseEntity
     {
         /// <summary>
         /// Gets or sets the picture mime type

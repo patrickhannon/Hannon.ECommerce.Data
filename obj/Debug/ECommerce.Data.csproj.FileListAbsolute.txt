@@ -7,12 +7,8 @@ C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.csproj.CopyComplete
 C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.dll
 C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.pdb
 C:\SourceControl\ECommerce.Data\obj\Debug\ECommerce.Data.csprojAssemblyReference.cache
-C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.csproj.App.config
-C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.csprojAssemblyReference.cache
-C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.exe.config
-C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.csproj.CoreCompileInputs.cache
-C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\ECommerce.Data.exe.config
-C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\ECommerce.Data.exe
+C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\ECommerce.Data.dll.config
+C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\ECommerce.Data.dll
 C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\ECommerce.Data.pdb
 C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\netstandard.dll
@@ -216,6 +212,9 @@ C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\System.Text.Encodings.Web.xml
 C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\System.Threading.Channels.xml
 C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\SourceControl\Hannon.ECommerce.Data\bin\Debug\System.ValueTuple.xml
+C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.csproj.App.config
+C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.csprojAssemblyReference.cache
+C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.csproj.CoreCompileInputs.cache
 C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.csproj.CopyComplete
-C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.exe
+C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.dll
 C:\SourceControl\Hannon.ECommerce.Data\obj\Debug\ECommerce.Data.pdb

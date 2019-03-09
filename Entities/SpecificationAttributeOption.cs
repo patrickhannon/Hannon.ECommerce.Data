@@ -1,11 +1,13 @@
 ﻿
 
+using ECommerce.Data.Core;
+
 namespace ECommerce.Data.Entities
 {
     /// <summary>
     /// Represents a specification attribute option
     /// </summary>
-    public partial class SpecificationAttributeOption
+    public partial class SpecificationAttributeOption : BaseEntity
     {
         /// <summary>
         /// Gets or sets the specification attribute identifier

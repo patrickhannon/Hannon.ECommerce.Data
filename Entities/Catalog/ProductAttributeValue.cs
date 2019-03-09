@@ -1,5 +1,6 @@
 
 
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Localization;
 
 namespace ECommerce.Data.Entities.Catalog
@@ -7,7 +8,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a product attribute value
     /// </summary>
-    public partial class ProductAttributeValue :ILocalizedEntity
+    public partial class ProductAttributeValue :BaseEntity
     {
         /// <summary>
         /// Gets or sets the product attribute mapping identifier

@@ -1,3 +1,4 @@
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Media;
 
 namespace ECommerce.Data.Entities.Media
@@ -5,7 +6,7 @@ namespace ECommerce.Data.Entities.Media
     /// <summary>
     /// Represents a picture binary data
     /// </summary>
-    public partial class PictureBinary
+    public partial class PictureBinary : BaseEntity
     {
         /// <summary>
         /// Gets or sets the picture binary

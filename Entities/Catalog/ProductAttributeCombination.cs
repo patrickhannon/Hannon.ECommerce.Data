@@ -1,9 +1,11 @@
+using ECommerce.Data.Core;
+
 namespace ECommerce.Data.Entities.Catalog
 {
     /// <summary>
     /// Represents a product attribute combination
     /// </summary>
-    public partial class ProductAttributeCombination
+    public partial class ProductAttributeCombination : BaseEntity
     {
         /// <summary>
         /// Gets or sets the product identifier

@@ -1,3 +1,4 @@
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Localization;
 
 namespace ECommerce.Data.Entities.Shipping
@@ -5,7 +6,7 @@ namespace ECommerce.Data.Entities.Shipping
     /// <summary>
     /// Represents a product availability range
     /// </summary>
-    public partial class ProductAvailabilityRange
+    public partial class ProductAvailabilityRange : BaseEntity
     {
         /// <summary>
         /// Gets or sets the name
