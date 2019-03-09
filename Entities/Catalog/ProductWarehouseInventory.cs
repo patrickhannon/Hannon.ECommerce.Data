@@ -1,5 +1,6 @@
 
 
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Shipping;
 
 namespace ECommerce.Data.Entities.Catalog
@@ -7,7 +8,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a record to manage product inventory per warehouse
     /// </summary>
-public partial class ProductWarehouseInventory 
+public partial class ProductWarehouseInventory : BaseEntity
     {
         /// <summary>
         /// Gets or sets the product identifier

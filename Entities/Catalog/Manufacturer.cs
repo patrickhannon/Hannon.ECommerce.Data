@@ -13,7 +13,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a manufacturer
     /// </summary>
-    public partial class Manufacturer
+    public class Manufacturer
     {
         private ICollection<DiscountManufacturerMapping> _discountManufacturerMappings;
 

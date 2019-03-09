@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dapper;
 using ECommerce.Data.Core.Data;
-using ECommerce.Data.Entities;
+using ECommerce.Data.Entities.Catalog;
+using ProductSpecificationAttribute = ECommerce.Data.Entities.Catalog.ProductSpecificationAttribute;
 
 namespace ECommerce.Data.Repository
 {
@@ -37,6 +38,16 @@ namespace ECommerce.Data.Repository
                     connection.Query<ProductSpecificationAttribute>("select * FROM Product_SpecificationAttribute_Mapping").ToList();
             }
             return productSpecificationAttribute;
+        }
+
+        public ICollection<ProductSpecificationAttribute> GetByProductId(int id)
+        {
+            ICollection<ProductSpecificationAttribute> productSpecificationAttributes;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                productSpecificationAttributes = connection.Query<ProductSpecificationAttribute>("select * FROM Product_SpecificationAttribute_Mapping Where ProductId = @Id", new { id = id }).ToList();
+            }
+            return productSpecificationAttributes;
         }
 
         public void Insert(ProductSpecificationAttribute entity)

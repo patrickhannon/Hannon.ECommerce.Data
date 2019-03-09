@@ -30,6 +30,16 @@ namespace ECommerce.Data.Repository
             return specificationAttribute;
         }
 
+        public ICollection<SpecificationAttribute> GetByProductId(int id)
+        {
+            ICollection<SpecificationAttribute> specificationAttribute;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                specificationAttribute = connection.Query<SpecificationAttribute>("select * FROM SpecificationAttribute Where ProductId = @Id", new { productId = id }).ToList();
+            }
+            return specificationAttribute;
+        }
+
         public IList<SpecificationAttribute> Get()
         {
             IList<SpecificationAttribute> specificationAttribute;

@@ -1,9 +1,11 @@
+using ECommerce.Data.Core;
+
 namespace ECommerce.Data.Entities.Catalog
 {
     /// <summary>
     /// Represents a product manufacturer mapping
     /// </summary>
-    public partial class ProductManufacturer
+    public partial class ProductManufacturer: BaseEntity
     {
         /// <summary>
         /// Gets or sets the product identifier

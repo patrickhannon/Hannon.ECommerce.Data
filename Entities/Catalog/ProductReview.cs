@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Customers;
 using ECommerce.Data.Entities.Stores;
 
@@ -9,7 +10,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a product review
     /// </summary>
-    public partial class ProductReview 
+    public partial class ProductReview : BaseEntity
     {
         private ICollection<ProductReviewHelpfulness> _productReviewHelpfulnessEntries;
         private ICollection<ProductReviewReviewTypeMapping> _productReviewReviewTypeMappingEntries;

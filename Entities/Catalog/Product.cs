@@ -632,7 +632,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductCategory> ProductCategories
         {
             get => _productCategories ?? (_productCategories = new List<ProductCategory>());
-            protected set => _productCategories = value;
+            set => _productCategories = value;
         }
 
         /// <summary>
@@ -641,7 +641,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductManufacturer> ProductManufacturers
         {
             get => _productManufacturers ?? (_productManufacturers = new List<ProductManufacturer>());
-            protected set => _productManufacturers = value;
+            set => _productManufacturers = value;
         }
 
         /// <summary>
@@ -650,7 +650,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductPicture> ProductPictures
         {
             get => _productPictures ?? (_productPictures = new List<ProductPicture>());
-            protected set => _productPictures = value;
+            set => _productPictures = value;
         }
 
         /// <summary>
@@ -659,7 +659,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductReview> ProductReviews
         {
             get => _productReviews ?? (_productReviews = new List<ProductReview>());
-            protected set => _productReviews = value;
+            set => _productReviews = value;
         }
 
         /// <summary>
@@ -668,7 +668,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductSpecificationAttribute> ProductSpecificationAttributes
         {
             get => _productSpecificationAttributes ?? (_productSpecificationAttributes = new List<ProductSpecificationAttribute>());
-            protected set => _productSpecificationAttributes = value;
+            set => _productSpecificationAttributes = value;
         }
 
         /// <summary>
@@ -677,7 +677,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductProductTagMapping> ProductProductTagMappings
         {
             get => _productProductTagMappings ?? (_productProductTagMappings = new List<ProductProductTagMapping>());
-            protected set => _productProductTagMappings = value;
+            set => _productProductTagMappings = value;
         }
 
         /// <summary>
@@ -686,7 +686,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductAttributeMapping> ProductAttributeMappings
         {
             get => _productAttributeMappings ?? (_productAttributeMappings = new List<ProductAttributeMapping>());
-            protected set => _productAttributeMappings = value;
+            set => _productAttributeMappings = value;
         }
 
         /// <summary>
@@ -695,7 +695,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductAttributeCombination> ProductAttributeCombinations
         {
             get => _productAttributeCombinations ?? (_productAttributeCombinations = new List<ProductAttributeCombination>());
-            protected set => _productAttributeCombinations = value;
+            set => _productAttributeCombinations = value;
         }
 
         /// <summary>
@@ -704,7 +704,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<TierPrice> TierPrices
         {
             get => _tierPrices ?? (_tierPrices = new List<TierPrice>());
-            protected set => _tierPrices = value;
+            set => _tierPrices = value;
         }
 
         /// <summary>
@@ -727,7 +727,7 @@ namespace ECommerce.Data.Entities.Catalog
         public virtual ICollection<ProductWarehouseInventory> ProductWarehouseInventory
         {
             get => _productWarehouseInventory ?? (_productWarehouseInventory = new List<ProductWarehouseInventory>());
-            protected set => _productWarehouseInventory = value;
+            set => _productWarehouseInventory = value;
         }
 
         public string Id { get; set; }

@@ -1,4 +1,5 @@
 using System;
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Customers;
 
 namespace ECommerce.Data.Entities.Catalog
@@ -6,7 +7,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a tier price
     /// </summary>
-    public partial class TierPrice 
+    public partial class TierPrice : BaseEntity
     {
         /// <summary>
         /// Gets or sets the product identifier

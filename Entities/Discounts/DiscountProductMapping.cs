@@ -1,4 +1,5 @@
 
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Catalog;
 
 namespace ECommerce.Data.Entities.Discounts
@@ -6,7 +7,7 @@ namespace ECommerce.Data.Entities.Discounts
     /// <summary>
     /// Represents a discount-product mapping class
     /// </summary>
-    public partial class DiscountProductMapping 
+    public class DiscountProductMapping : BaseEntity
     {
         /// <summary>
         /// Gets or sets the discount identifier

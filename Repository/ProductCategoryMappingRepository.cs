@@ -28,20 +28,24 @@ namespace ECommerce.Data.Repository
             return productCategoryMapping;
         }
 
-        public ProductCategory GetByProductId(int id)
+        public ICollection<ProductCategory> GetByProductId(int id)
         {
-            ProductCategory productCategory;
+            ICollection<ProductCategory> productCategories;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                productCategory = connection.Query<ProductCategory>("select * FROM ProductCategory Where Id = @Id", new { productId = id }).FirstOrDefault();
+                productCategories = connection.Query<ProductCategory>("select * FROM Product_Category_Mapping Where ProductId = @Id", new { id = id }).ToList();
             }
-            return productCategory;
+            return productCategories;
         }
-
 
         public ProductCategory GetById(object id)
         {
-            throw new NotImplementedException();
+            ProductCategory productCategories;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                productCategories = connection.Query<ProductCategory>("select * FROM ProductCategory Where Id = @Id", new { id = id }).FirstOrDefault();
+            }
+            return productCategories;
         }
 
         public IList<ProductCategory> Get()

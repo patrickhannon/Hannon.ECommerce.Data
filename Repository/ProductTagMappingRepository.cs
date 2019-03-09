@@ -39,6 +39,17 @@ namespace ECommerce.Data.Repository
             return productProductTagMapping;
         }
 
+        public ICollection<ProductProductTagMapping> GetByProductId(int id)
+        {
+            ICollection<ProductProductTagMapping> productProductTagMapping;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                productProductTagMapping = connection.Query<ProductProductTagMapping>("select * FROM Product_ProductTag_Mapping Where ProductId = @Id", new { id = id }).ToList();
+            }
+            return productProductTagMapping;
+        }
+
+
         public void Insert(ProductProductTagMapping entity)
         {
             throw new NotImplementedException();

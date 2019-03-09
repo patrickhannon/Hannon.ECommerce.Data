@@ -1,3 +1,4 @@
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Media;
 
 namespace ECommerce.Data.Entities.Catalog
@@ -5,7 +6,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a product picture mapping
     /// </summary>
-    public partial class ProductPicture 
+    public partial class ProductPicture : BaseEntity
     {
         /// <summary>
         /// Gets or sets the product identifier

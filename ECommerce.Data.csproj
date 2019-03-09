@@ -518,7 +518,6 @@
     <Compile Include="Entities\Polls\PollVotingRecord.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\ProductProductTagMapping.cs" />
-    <Compile Include="Entities\ProductSpecificationAttribute.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\Security\AclRecord.cs" />
     <Compile Include="Entities\Security\CaptchaSettings.cs" />
@@ -581,6 +580,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\DiscountProductMappingRepository.cs" />
     <Compile Include="Repository\PictureBinaryRepository.cs" />
     <Compile Include="Repository\PictureRepository.cs" />
     <Compile Include="Repository\ProductAttributeCombinationRepository.cs" />
@@ -588,13 +588,18 @@
     <Compile Include="Repository\ProductAttributeValueRepository.cs" />
     <Compile Include="Repository\ProductAvailabilityRangeRepository.cs" />
     <Compile Include="Repository\ProductCategoryMappingRepository.cs" />
+    <Compile Include="Repository\ProductManufacturerMappingRepository.cs" />
+    <Compile Include="Repository\ProductPictureRepository.cs" />
     <Compile Include="Repository\ProductProductAttributeMappingRepository.cs" />
+    <Compile Include="Repository\ProductReviewsRepository.cs" />
     <Compile Include="Repository\ProductTagMappingRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\ProductSpecificationAttributeMappingRepository.cs" />
+    <Compile Include="Repository\ProductWarehouseInventoryRepository.cs" />
     <Compile Include="Repository\RolesRepository.cs" />
     <Compile Include="Repository\SpecificationAttributeOptionRepository.cs" />
     <Compile Include="Repository\SpecificationAttributeRepository.cs" />
+    <Compile Include="Repository\TierPricesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
