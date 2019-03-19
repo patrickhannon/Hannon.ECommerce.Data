@@ -39,5 +39,10 @@ public partial class ProductWarehouseInventory : BaseEntity
         /// Gets the warehouse
         /// </summary>
         public virtual Warehouse Warehouse { get; set; }
+
+        public override string ToString()
+        {
+            return $"{nameof(ProductId)}: {ProductId}, {nameof(WarehouseId)}: {WarehouseId}, {nameof(StockQuantity)}: {StockQuantity}, {nameof(ReservedQuantity)}: {ReservedQuantity}";
+        }
     }
 }

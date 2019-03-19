@@ -60,5 +60,10 @@ namespace ECommerce.Data.Entities.Catalog
             get => (SpecificationAttributeType)AttributeTypeId;
             set => AttributeTypeId = (int)value;
         }
+
+        public override string ToString()
+        {
+            return $"{nameof(ProductId)}: {ProductId}, {nameof(AttributeTypeId)}: {AttributeTypeId}, {nameof(SpecificationAttributeOptionId)}: {SpecificationAttributeOptionId}, {nameof(CustomValue)}: {CustomValue}, {nameof(AllowFiltering)}: {AllowFiltering}, {nameof(ShowOnProductPage)}: {ShowOnProductPage}, {nameof(DisplayOrder)}: {DisplayOrder}, {nameof(Product)}: {Product}";
+        }
     }
 }

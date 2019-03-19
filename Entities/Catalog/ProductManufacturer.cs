@@ -22,6 +22,11 @@ namespace ECommerce.Data.Entities.Catalog
         /// </summary>
         public bool IsFeaturedProduct { get; set; }
 
+        public override string ToString()
+        {
+            return $"{nameof(ProductId)}: {ProductId}, {nameof(ManufacturerId)}: {ManufacturerId}, {nameof(IsFeaturedProduct)}: {IsFeaturedProduct}, {nameof(DisplayOrder)}: {DisplayOrder}";
+        }
+
         /// <summary>
         /// Gets or sets the display order
         /// </summary>

@@ -232,6 +232,7 @@
   <ItemGroup>
     <Compile Include="Core\BaseEntity.cs" />
     <Compile Include="Core\CommonHelper.cs" />
+    <Compile Include="Core\DBConnectFactory.cs" />
     <Compile Include="Core\Data\DataProviderType.cs" />
     <Compile Include="Core\Data\DataSettings.cs" />
     <Compile Include="Core\Data\DataSettingsManager.cs" />
@@ -547,8 +548,6 @@
     <Compile Include="Entities\Shipping\ShippingSettings.cs" />
     <Compile Include="Entities\Shipping\ShippingStatus.cs" />
     <Compile Include="Entities\Shipping\Warehouse.cs" />
-    <Compile Include="Entities\SpecificationAttribute.cs" />
-    <Compile Include="Entities\SpecificationAttributeOption.cs" />
     <Compile Include="Entities\StoreInformationSettings.cs" />
     <Compile Include="Entities\Stores\IStoreMappingSupported.cs" />
     <Compile Include="Entities\Stores\Store.cs" />
@@ -580,7 +579,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\DiscountProductMappingRepository.cs" />
+    <Compile Include="Repository\ICustomerRepository.cs" />
     <Compile Include="Repository\PictureBinaryRepository.cs" />
     <Compile Include="Repository\PictureRepository.cs" />
     <Compile Include="Repository\ProductAttributeCombinationRepository.cs" />
@@ -597,6 +598,7 @@
     <Compile Include="Repository\ProductSpecificationAttributeMappingRepository.cs" />
     <Compile Include="Repository\ProductWarehouseInventoryRepository.cs" />
     <Compile Include="Repository\RolesRepository.cs" />
+    <Compile Include="Repository\ShoppingCartItemRepository.cs" />
     <Compile Include="Repository\SpecificationAttributeOptionRepository.cs" />
     <Compile Include="Repository\SpecificationAttributeRepository.cs" />
     <Compile Include="Repository\TierPricesRepository.cs" />

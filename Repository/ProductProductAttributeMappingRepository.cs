@@ -20,6 +20,11 @@ namespace ECommerce.Data.Repository
             _connectionString = connectionString;
         }
 
+        public ICollection<ProductAttributeMapping> GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<ProductAttributeMapping> Get()
         {
             IList<ProductAttributeMapping> productAttributeMapping;

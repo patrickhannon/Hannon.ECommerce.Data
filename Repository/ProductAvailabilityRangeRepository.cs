@@ -33,6 +33,11 @@ namespace ECommerce.Data.Repository
             throw new NotImplementedException();
         }
 
+        public ICollection<ProductAvailabilityRange> GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<ProductAvailabilityRange> Get()
         {
             IList<ProductAvailabilityRange> productAvailabilityRanges;

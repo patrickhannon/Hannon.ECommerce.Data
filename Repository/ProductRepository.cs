@@ -18,6 +18,12 @@ namespace ECommerce.Data.Repository
         {
             _connectionString = connectionString;
         }
+
+        public ICollection<Product> GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Product> Get()
         {
             IList<Product> product;

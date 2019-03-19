@@ -36,5 +36,10 @@ namespace ECommerce.Data.Entities.Catalog
         /// Gets the product
         /// </summary>
         public virtual Product Product { get; set; }
+
+        public override string ToString()
+        {
+            return $"{nameof(ProductId)}: {ProductId}, {nameof(CategoryId)}: {CategoryId}, {nameof(IsFeaturedProduct)}: {IsFeaturedProduct}, {nameof(DisplayOrder)}: {DisplayOrder}";
+        }
     }
 }

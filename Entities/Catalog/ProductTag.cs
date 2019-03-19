@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using ECommerce.Data.Core;
 
 namespace ECommerce.Data.Entities.Catalog
 {
     /// <summary>
     /// Represents a product tag
     /// </summary>
-    public partial class ProductTag
+    public partial class ProductTag: BaseEntity
     {
         private ICollection<ProductProductTagMapping> _productProductTagMappings;
 

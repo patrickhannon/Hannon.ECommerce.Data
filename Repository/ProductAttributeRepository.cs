@@ -30,6 +30,11 @@ namespace ECommerce.Data.Repository
             return productAttribute;
         }
 
+        public ICollection<ProductAttribute> GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<ProductAttribute> Get()
         {
             IList<ProductAttribute> productAttribute;

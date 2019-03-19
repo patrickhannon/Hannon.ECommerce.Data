@@ -20,6 +20,11 @@ namespace ECommerce.Data.Entities.Catalog
         /// </summary>
         public int CustomerId { get; set; }
 
+        public override string ToString()
+        {
+            return $"{nameof(CustomerId)}: {CustomerId}, {nameof(ProductId)}: {ProductId}, {nameof(StoreId)}: {StoreId}, {nameof(IsApproved)}: {IsApproved}, {nameof(Title)}: {Title}, {nameof(ReviewText)}: {ReviewText}, {nameof(ReplyText)}: {ReplyText}, {nameof(CustomerNotifiedOfReply)}: {CustomerNotifiedOfReply}, {nameof(Rating)}: {Rating}, {nameof(HelpfulYesTotal)}: {HelpfulYesTotal}, {nameof(HelpfulNoTotal)}: {HelpfulNoTotal}, {nameof(CreatedOnUtc)}: {CreatedOnUtc}, {nameof(Customer)}: {Customer}, {nameof(Product)}: {Product}, {nameof(Store)}: {Store}";
+        }
+
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>

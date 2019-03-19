@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Localization;
 
 namespace ECommerce.Data.Entities.Catalog
@@ -6,7 +7,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a specification attribute
     /// </summary>
-    public partial class SpecificationAttribute : ILocalizedEntity
+    public partial class SpecificationAttribute : BaseEntity
     {
         private ICollection<SpecificationAttributeOption> _specificationAttributeOptions;
 

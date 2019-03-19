@@ -1,5 +1,6 @@
 ﻿
 
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Localization;
 
 namespace ECommerce.Data.Entities.Catalog
@@ -7,7 +8,7 @@ namespace ECommerce.Data.Entities.Catalog
     /// <summary>
     /// Represents a specification attribute option
     /// </summary>
-    public partial class SpecificationAttributeOption : ILocalizedEntity
+    public class SpecificationAttributeOption : BaseEntity
     {
         /// <summary>
         /// Gets or sets the specification attribute identifier

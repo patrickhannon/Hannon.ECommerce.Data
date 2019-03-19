@@ -33,6 +33,11 @@ namespace ECommerce.Data.Repository
             throw new NotImplementedException();
         }
 
+        public ICollection<PictureBinary> GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<PictureBinary> Get()
         {
             IList<PictureBinary> PictureBinary;

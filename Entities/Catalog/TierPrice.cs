@@ -19,6 +19,11 @@ namespace ECommerce.Data.Entities.Catalog
         /// </summary>
         public int StoreId { get; set; }
 
+        public override string ToString()
+        {
+            return $"{nameof(ProductId)}: {ProductId}, {nameof(StoreId)}: {StoreId}, {nameof(CustomerRoleId)}: {CustomerRoleId}, {nameof(Quantity)}: {Quantity}, {nameof(Price)}: {Price}, {nameof(StartDateTimeUtc)}: {StartDateTimeUtc}, {nameof(EndDateTimeUtc)}: {EndDateTimeUtc}";
+        }
+
         /// <summary>
         /// Gets or sets the customer role identifier
         /// </summary>

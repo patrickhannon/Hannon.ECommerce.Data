@@ -29,6 +29,11 @@ namespace ECommerce.Data.Repository
             return picture;
         }
 
+        public ICollection<Picture> GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Picture> Get()
         {
             IList<Picture> picture;

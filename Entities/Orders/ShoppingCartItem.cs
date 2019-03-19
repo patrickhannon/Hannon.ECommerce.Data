@@ -1,4 +1,5 @@
 using System;
+using ECommerce.Data.Core;
 using ECommerce.Data.Entities.Catalog;
 using ECommerce.Data.Entities.Customers;
 using ECommerce.Data.Entities.Orders;
@@ -8,8 +9,13 @@ namespace ECommerce.Data.Entities.Orders
     /// <summary>
     /// Represents a shopping cart item
     /// </summary>
-    public partial class ShoppingCartItem 
+    public partial class ShoppingCartItem : BaseEntity
     {
+        /// <summary>
+        /// Gets or sets the store identifier
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Gets or sets the store identifier
         /// </summary>
@@ -31,29 +37,9 @@ namespace ECommerce.Data.Entities.Orders
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product attributes in XML format
-        /// </summary>
-        public string AttributesXml { get; set; }
-
-        /// <summary>
-        /// Gets or sets the price enter by a customer
-        /// </summary>
-        public decimal CustomerEnteredPrice { get; set; }
-
-        /// <summary>
         /// Gets or sets the quantity
         /// </summary>
         public int Quantity { get; set; }
-
-        /// <summary>
-        /// Gets or sets the rental product start date (null if it's not a rental product)
-        /// </summary>
-        public DateTime? RentalStartDateUtc { get; set; }
-
-        /// <summary>
-        /// Gets or sets the rental product end date (null if it's not a rental product)
-        /// </summary>
-        public DateTime? RentalEndDateUtc { get; set; }
 
         /// <summary>
         /// Gets or sets the date and time of instance creation

@@ -18,6 +18,8 @@ namespace ECommerce.Data.Core.Data
         /// <returns>Entity</returns>
         TEntity GetById(object id);
 
+        ICollection<TEntity> GetByProductId(int id);
+
         /// <summary>
         /// Get entity by identifier
         /// </summary>

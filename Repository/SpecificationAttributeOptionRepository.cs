@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using Dapper;
 using ECommerce.Data.Core.Data;
 using ECommerce.Data.Entities;
+using ECommerce.Data.Entities.Catalog;
 using ECommerce.Data.Entities.Media;
 
 namespace ECommerce.Data.Repository

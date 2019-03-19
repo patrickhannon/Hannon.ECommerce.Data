@@ -19,6 +19,11 @@ namespace ECommerce.Data.Entities
         /// </summary>
         public int ProductTagId { get; set; }
 
+        public override string ToString()
+        {
+            return $"{nameof(ProductId)}: {ProductId}, {nameof(ProductTagId)}: {ProductTagId}, {nameof(Product)}: {Product}";
+        }
+
         /// <summary>
         /// Gets or sets the product
         /// </summary>

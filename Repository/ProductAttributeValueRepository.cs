@@ -74,6 +74,11 @@ namespace ECommerce.Data.Repository
             throw new NotImplementedException();
         }
 
+        ICollection<ProductAttributeValue> IRepository<ProductAttributeValue>.GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IQueryable<ProductAttributeValue> Table { get; }
         public IQueryable<ProductAttributeValue> TableNoTracking { get; }
 

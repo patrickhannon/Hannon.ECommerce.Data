@@ -43,6 +43,11 @@ namespace ECommerce.Data.Repository
             return category;
         }
 
+        public ICollection<Category> GetByProductId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Category> Get()
         {
             IList<Category> category;
