@@ -67,9 +67,7 @@ namespace ECommerce.Data.Repository
                         ",CreatedOnUtc" +
                         ",LastLoginDateUtc" +
                         ",LastActivityDateUtc" +
-                        ",RegisteredInStoreId" +
-                        ",BillingAddress_Id" +
-                        ",ShippingAddress_Id)" +
+                        ",RegisteredInStoreId)" +
                         "Values(" +
                         "@CustomerGuid" +
                         ",@Username" +
@@ -89,7 +87,7 @@ namespace ECommerce.Data.Repository
                         ",@SystemName" +
                         ",@LastIpAddress" +
                         ",@CreatedOnUtc" +
-                        ",@LastLoginDateUtc,@LastActivityDateUtc,@RegisteredInStoreId,@BillingAddress_Id,@ShippingAddress_Id)",
+                        ",@LastLoginDateUtc,@LastActivityDateUtc,@RegisteredInStoreId)",
                     new
                     {
                         CustomerGuid = entity.CustomerGuid,
@@ -113,9 +111,7 @@ namespace ECommerce.Data.Repository
                         LastLoginDateUtc = entity.LastLoginDateUtc,
                         LastActivityDateUtc = entity.LastActivityDateUtc,
                         RegisteredInStoreId = entity.RegisteredInStoreId,
-                        BillingAddress_Id = entity.BillingAddressId,
-                        ShippingAddress_Id = entity.ShippingAddress
-                    });
+                });
             }
         }
 

@@ -84,15 +84,17 @@ namespace ECommerce.Data.Repository
             {
                 connection.Open();
                 var identity = connection.Execute("insert into ShoppingCartItem" +
-                                              "(StoreId,ShoppingCartTypeId,CustomerId,ProductId,Quantity) " +
-                                                  "values (@StoreId,@ShoppingCartTypeId,@CustomerId,@ProductId,@Quantity)",
+                                            "(StoreId,ShoppingCartTypeId,CustomerId,ProductId,Quantity,CreatedOnUtc, UpdatedOnUtc) " +
+                                "values (@StoreId,@ShoppingCartTypeId,@CustomerId,@ProductId,@Quantity,@CreatedOnUtc,@UpdatedOnUtc)",
                 new
                 {
                     StoreId = item.StoreId,
                     ShoppingCartTypeId = item.ShoppingCartTypeId,
-                    CustomerId = item.Customer.Id,
+                    CustomerId = item.CustomerId,
                     ProductId = item.ProductId,
-                    Quantity = item.Quantity
+                    Quantity = item.Quantity,
+                    CreatedOnUtc = item.CreatedOnUtc,
+                    UpdatedOnUtc = item.UpdatedOnUtc
                 });
             }
         }
