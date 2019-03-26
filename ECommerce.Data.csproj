@@ -582,6 +582,7 @@
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\DiscountProductMappingRepository.cs" />
     <Compile Include="Repository\ICustomerRepository.cs" />
+    <Compile Include="Repository\ISearchRepository.cs" />
     <Compile Include="Repository\PictureBinaryRepository.cs" />
     <Compile Include="Repository\PictureRepository.cs" />
     <Compile Include="Repository\ProductAttributeCombinationRepository.cs" />

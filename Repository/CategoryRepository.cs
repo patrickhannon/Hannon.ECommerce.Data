@@ -35,6 +35,7 @@ namespace ECommerce.Data.Repository
 
         public Category GetById(object id)
         {
+
             Category category;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {

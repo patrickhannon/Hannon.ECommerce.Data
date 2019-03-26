@@ -109,6 +109,11 @@ namespace ECommerce.Data.Entities.Catalog
         public int NotApprovedRatingSum { get; set; }
 
         /// <summary>
+        /// Gets or sets the rating sum (not approved reviews)
+        /// </summary>
+        public int CategoryId { get; set; }
+
+        /// <summary>
         /// Gets or sets the total rating votes (approved reviews)
         /// </summary>
         public int ApprovedTotalReviews { get; set; }
